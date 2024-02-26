@@ -1,0 +1,6 @@
+# My ignores
+addons/
+
+# Godot 4+ specific ignores
+.godot/
+
