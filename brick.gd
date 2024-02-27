@@ -11,5 +11,6 @@ func get_hit():
 	if hp <= 0:
 		die()
 
+
 func die():
 	queue_free()

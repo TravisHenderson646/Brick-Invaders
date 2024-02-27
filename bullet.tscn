@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhj7c7v8vuhlp"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_lphid"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qyg6"]
+size = Vector2(2, 2)
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_lphid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_4qyg6")
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D"]
+color = Color(0.803922, 0.8, 0.411765, 1)
+polygon = PackedVector2Array(-1, -1, -1, 1, 1, 1, 1, -1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
