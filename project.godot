@@ -11,10 +11,32 @@ config_version=5
 [application]
 
 config/name="Brick Invaders"
+run/main_scene="res://test_level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=144
+window/size/viewport_height=256
+window/size/window_width_override=432
+window/size/window_height_override=768
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/time_tracker/plugin.cfg")
+
+[layer_names]
+
+2d_physics/layer_1="walls"
+2d_physics/layer_2="paddle"
+2d_physics/layer_3="ball"
+2d_physics/layer_4="brick"
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

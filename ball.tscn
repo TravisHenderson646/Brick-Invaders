@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuoc7xdefmh06"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_kg4td"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij5bd"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uikr"]
+size = Vector2(8, 8)
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 9
+script = ExtResource("1_kg4td")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_ij5bd")
+metadata/_edit_lock_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D"]
+color = Color(0.545098, 0.545098, 0.545098, 1)
+polygon = PackedVector2Array(-4, -4, -4, 4, 4, 4, 4, -4)
+metadata/_edit_lock_ = true
+
+[node name="PaddleDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleDetector"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_7uikr")
+
+[connection signal="body_entered" from="PaddleDetector" to="." method="_on_paddle_detector_body_entered"]
