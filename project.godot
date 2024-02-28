@@ -13,7 +13,6 @@ config_version=5
 config/name="Brick Invaders"
 run/main_scene="res://test_level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -27,6 +26,10 @@ window/stretch/scale_mode="integer"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/time_tracker/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [layer_names]
 

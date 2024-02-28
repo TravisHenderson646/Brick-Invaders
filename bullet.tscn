@@ -7,7 +7,7 @@ size = Vector2(2, 2)
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 16
-collision_mask = 0
+collision_mask = 4
 script = ExtResource("1_lphid")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

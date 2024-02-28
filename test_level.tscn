@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3ki2ndxqchnf"]
+[gd_scene load_steps=10 format=3 uid="uid://c3ki2ndxqchnf"]
 
 [ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="1_esxhb"]
 [ext_resource type="PackedScene" uid="uid://cuoc7xdefmh06" path="res://ball.tscn" id="2_ab7r8"]
 [ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="3_6m1yy"]
 [ext_resource type="PackedScene" uid="uid://dhj7c7v8vuhlp" path="res://bullet.tscn" id="4_snorm"]
+[ext_resource type="PackedScene" uid="uid://ccted1e7gs2gs" path="res://bullet_sprinkler.tscn" id="5_fn271"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jsvq"]
 size = Vector2(144, 12)
@@ -72,6 +73,8 @@ position = Vector2(89, 51)
 [node name="Brick2" parent="." instance=ExtResource("3_6m1yy")]
 position = Vector2(44, 37)
 
+[node name="BulletSprinkler" parent="." instance=ExtResource("5_fn271")]
+position = Vector2(69, 114)
+
 [node name="Bullet" parent="." instance=ExtResource("4_snorm")]
-position = Vector2(58, 144)
-collision_mask = 4
+position = Vector2(43, 164)

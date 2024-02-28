@@ -25,4 +25,5 @@ func _on_paddle_detector_body_entered(body: Node2D) -> void:
 		return
 	# todo fine tune this, maybe it gives more spin if its lowering the angle
 	if velocity.y > 0:
+		direction.y = -direction.y
 		direction.x += -body.velocity.x * 0.1 # maybe this should be capped
