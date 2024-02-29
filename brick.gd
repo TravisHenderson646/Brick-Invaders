@@ -13,4 +13,5 @@ func get_hit():
 
 
 func die():
+	EventBus.update_score.emit(100)
 	queue_free()

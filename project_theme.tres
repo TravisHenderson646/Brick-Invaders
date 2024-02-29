@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ektgx3qt54is"]
+
+[ext_resource type="FontFile" uid="uid://p55wrixvkp2v" path="res://m5x7.ttf" id="1_scsni"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7s0hy"]
+bg_color = Color(0.0980392, 0.0980392, 0.0980392, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.494118, 0.494118, 0.494118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7541l"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.494118, 0.494118, 0.494118, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aoxrp"]
+bg_color = Color(0.443137, 0.231373, 0.368627, 1)
+anti_aliasing = false
+
+[resource]
+default_font = ExtResource("1_scsni")
+default_font_size = 16
+Label/colors/font_color = Color(0.494118, 0.494118, 0.494118, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_7s0hy")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_7541l")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_aoxrp")

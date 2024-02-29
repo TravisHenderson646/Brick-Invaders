@@ -10,7 +10,7 @@ var direction = Vector2(1, 1)
 
 func _physics_process(_delta: float) -> void:
 	velocity = direction.normalized() * SPEED
-	
+
 	var collision_info = move_and_collide(velocity)
 	if not collision_info:
 		return

@@ -14,6 +14,10 @@ config/name="Brick Invaders"
 run/main_scene="res://test_level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[autoload]
+
+EventBus="*res://event_bus.gd"
+
 [display]
 
 window/size/viewport_width=144
@@ -30,6 +34,10 @@ enabled=PackedStringArray("res://addons/time_tracker/plugin.cfg")
 [filesystem]
 
 import/blender/enabled=false
+
+[gui]
+
+theme/custom="res://project_theme.tres"
 
 [layer_names]
 
