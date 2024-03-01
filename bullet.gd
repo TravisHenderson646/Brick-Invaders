@@ -1,7 +1,7 @@
 class_name Bullet
 extends Area2D
 
-@export var SPEED = .3
+@export var SPEED = .8
 
 var direction = Vector2(1, 0)
 var velocity = Vector2.ZERO
@@ -13,7 +13,7 @@ func _physics_process(_delta: float) -> void:
 
 	position += velocity
 
-	if tick_counter >= 3600:
+	if tick_counter >= 360:
 		queue_free()
 
 

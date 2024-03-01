@@ -37,4 +37,10 @@ color = Color(0.878431, 0.286275, 0.407843, 1)
 polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
 metadata/_edit_lock_ = true
 
+[node name="BallOnDeck" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(12, 0)
+color = Color(0.545098, 0.545098, 0.545098, 1)
+polygon = PackedVector2Array(0, 0, 0, -8, 8, -8, 8, 0)
+
 [connection signal="area_entered" from="Heart" to="." method="_on_heart_area_entered"]

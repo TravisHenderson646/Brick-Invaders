@@ -7,12 +7,14 @@ extends Node2D
 
 var tick_counter := -1
 var bullet_counter := -1
-
+var direction := Vector2.ZERO
+var speed := 0.0
 
 func _physics_process(_delta: float) -> void:
 	tick_counter += 1
-	if tick_counter > 200:
+	if tick_counter > 600:
 		die()
+	position += direction.normalized() * speed
 	if tick_counter % ticks_per_spawn == 0:
 		bullet_counter += 1
 		var bullet = bullet_scene.instantiate()

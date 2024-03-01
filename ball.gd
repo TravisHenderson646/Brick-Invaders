@@ -8,6 +8,10 @@ extends CharacterBody2D
 var direction = Vector2(1, 1)
 
 
+func _ready() -> void:
+	modulate = Color(modulate.r + randf() - 0.5, modulate.g + randf() - 0.5, modulate.b + randf() - 0.5)
+
+
 func _physics_process(_delta: float) -> void:
 	velocity = direction.normalized() * SPEED
 
@@ -18,6 +22,12 @@ func _physics_process(_delta: float) -> void:
 	direction = direction.bounce(collision_info.get_normal())
 	if collider.has_method('get_hit'):
 		collider.get_hit()
+	if collider.name == 'BottomWall':
+		EventBus.update_score.emit(-200)
+		die()
+
+func die():
+	queue_free()
 
 
 func _on_paddle_detector_body_entered(body: Node2D) -> void:
@@ -25,5 +35,6 @@ func _on_paddle_detector_body_entered(body: Node2D) -> void:
 		return
 	# todo fine tune this, maybe it gives more spin if its lowering the angle
 	if velocity.y > 0:
+		SPEED = SPEED * 1.03
 		direction.y = -direction.y
-		direction.x += -body.velocity.x * 0.1 # maybe this should be capped
+		direction.x += -body.velocity.x * 0.14 # maybe this should be capped
