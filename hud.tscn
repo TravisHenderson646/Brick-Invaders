@@ -45,7 +45,7 @@ text = "balls:"
 [node name="BallsCount" type="Label" parent="MarginContainer/HSplitContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "  X"
+text = "  Xtest"
 
 [node name="Score" type="HBoxContainer" parent="MarginContainer/HSplitContainer/VBoxContainer"]
 layout_mode = 2
