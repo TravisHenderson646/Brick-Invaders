@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="1_esxhb"]
 [ext_resource type="Script" path="res://test_level.gd" id="1_lta5k"]
-[ext_resource type="PackedScene" uid="uid://g11x6civ14yy" path="res://enemy_spawner.tscn" id="3_vfg05"]
+[ext_resource type="Script" path="res://bullet_set_handler.gd" id="3_gpvso"]
 [ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="6_pugm5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jsvq"]
@@ -58,7 +58,8 @@ metadata/_edit_lock_ = true
 [node name="Paddle" parent="." instance=ExtResource("1_esxhb")]
 position = Vector2(56, 177)
 
-[node name="EnemySpawner" parent="." instance=ExtResource("3_vfg05")]
+[node name="BulletSetHandler" type="Node2D" parent="."]
+script = ExtResource("3_gpvso")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

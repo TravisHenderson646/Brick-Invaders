@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 	tick_counter += 1
 	if tick_counter == 600:
 		bullet_set_finished.emit()
-	if tick_counter % 60 == 0:
+	if tick_counter % 20 == 0:
 		left = not left
 		if left:
 			spawn_bullet(nw_spawn.position, Vector2(1, 2))

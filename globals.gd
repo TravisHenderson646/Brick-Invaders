@@ -7,6 +7,12 @@ var levels := {
 	level1 = 'res://level1.tscn'
 }
 
+var bullet_sets := {
+	# dont forget that the keys are strings not vars
+	enemy_spawner = 'res://enemy_spawner.tscn',
+	bullet_set1 = 'res://bullet_set1.tscn'
+}
+
 var max_health := 8: #intentionally 1 larger than hp bar on hud
 	set(new_value):
 		max_health = new_value
