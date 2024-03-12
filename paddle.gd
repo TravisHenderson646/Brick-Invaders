@@ -7,8 +7,6 @@ extends CharacterBody2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var ball_on_deck: Polygon2D = $BallOnDeck
 
-var hp := 8
-var max_hp := 8 #intentionally 1 larger than hp bar on hud
 
 func _physics_process(_delta: float) -> void:
 	var direction := 0
@@ -34,9 +32,9 @@ func handle_collision() -> void:
 
 
 func get_hit() -> void:
-	hp -= 1
-	EventBus.player_got_hit.emit()
-	if hp <= 0:
+	Globals.health -= 1
+	EventBus.updated_health.emit()
+	if Globals.health <= 0:
 		die()
 
 func die() -> void:
@@ -46,6 +44,6 @@ func die() -> void:
 func _on_heart_area_entered(area: Area2D) -> void:
 	if area is Bullet:
 		get_hit()
-		if hp > 0:
+		if Globals.health > 0:
 			area.queue_free()
 

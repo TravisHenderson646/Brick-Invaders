@@ -8,14 +8,17 @@ extends PanelContainer
 var num_balls := 1
 
 func _ready() -> void:
-	EventBus.player_got_hit.connect(on_player_got_hit)
-	EventBus.update_score.connect(on_update_score)
-	EventBus.update_ball_count.connect(on_update_ball_count)
+	points_total.text = str(Globals.score)
+	health_bar.value = Globals.health - 1
+	EventBus.updated_health.connect(_on_updated_health)
+	EventBus.updated_score.connect(_on_updated_score)
+	EventBus.updated_balls_in_play.connect(_on_updated_balls_in_play)
+	EventBus.updated_balls_ready.connect(_on_updated_balls_ready)
 
+func _on_updated_balls_in_play() -> void: pass
 
-func on_update_ball_count(change) -> void:
-	num_balls += change
-	match num_balls:
+func _on_updated_balls_ready() -> void:
+	match Globals.balls_ready:
 		0:
 			balls_count.text = ''
 		1:
@@ -26,10 +29,9 @@ func on_update_ball_count(change) -> void:
 			balls_count.text = ' X X X'
 
 
-func on_player_got_hit() -> void:
-	health_bar.value -= 1
+func _on_updated_health() -> void:
+	health_bar.value = Globals.health - 1
 
 
-func on_update_score(points) -> void:
-	var _num = int(points_total.text)
-	points_total.text = str(_num + points)
+func _on_updated_score() -> void:
+	points_total.text = str(Globals.score)

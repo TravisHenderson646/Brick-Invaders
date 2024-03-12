@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3ki2ndxqchnf"]
+[gd_scene load_steps=10 format=3 uid="uid://dj1xevihxo2qc"]
 
-[ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="1_esxhb"]
-[ext_resource type="Script" path="res://test_level.gd" id="1_lta5k"]
-[ext_resource type="PackedScene" uid="uid://g11x6civ14yy" path="res://enemy_spawner.tscn" id="3_vfg05"]
-[ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="6_pugm5"]
+[ext_resource type="Script" path="res://test_level.gd" id="1_spm0a"]
+[ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="2_5s2hh"]
+[ext_resource type="PackedScene" uid="uid://g11x6civ14yy" path="res://enemy_spawner.tscn" id="3_1kn0a"]
+[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="5_r5vyu"]
+[ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="5_sxhes"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jsvq"]
 size = Vector2(144, 12)
@@ -17,8 +18,8 @@ size = Vector2(12, 256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0h35t"]
 size = Vector2(144, 12)
 
-[node name="TestLevel" type="Node2D"]
-script = ExtResource("1_lta5k")
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_spm0a")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="Node2D" parent="."]
@@ -55,11 +56,17 @@ color = Color(0.0980392, 0.0980392, 0.0980392, 1)
 polygon = PackedVector2Array(144, 0, 144, 256, 0, 256, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="Paddle" parent="." instance=ExtResource("1_esxhb")]
+[node name="Paddle" parent="." instance=ExtResource("2_5s2hh")]
 position = Vector2(56, 177)
 
-[node name="EnemySpawner" parent="." instance=ExtResource("3_vfg05")]
+[node name="EnemySpawner" parent="." instance=ExtResource("3_1kn0a")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_pugm5")]
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_sxhes")]
+
+[node name="Brick" parent="." instance=ExtResource("5_r5vyu")]
+position = Vector2(74, 67)
+
+[node name="Brick2" parent="." instance=ExtResource("5_r5vyu")]
+position = Vector2(46, 86)

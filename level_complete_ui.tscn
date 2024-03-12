@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://ci605i0wgsim4"]
+
+[ext_resource type="Script" path="res://level_complete_ui.gd" id="1_fnf0x"]
+
+[sub_resource type="Gradient" id="Gradient_v0olv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aitt3"]
+gradient = SubResource("Gradient_v0olv")
+width = 16
+height = 16
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13802"]
+gradient = SubResource("Gradient_v0olv")
+width = 16
+height = 16
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1aosu"]
+gradient = SubResource("Gradient_v0olv")
+width = 16
+height = 16
+
+[node name="LevelCompleteUI" type="PanelContainer"]
+process_mode = 3
+offset_left = 11.0
+offset_top = 18.0
+offset_right = 131.0
+offset_bottom = 165.0
+script = ExtResource("1_fnf0x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Tooltip" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+focus_neighbor_left = NodePath("../HBoxContainer/Upgrade1")
+focus_neighbor_top = NodePath("../HBoxContainer/Upgrade1")
+focus_neighbor_right = NodePath("../HBoxContainer/Upgrade1")
+focus_neighbor_bottom = NodePath("../HBoxContainer/Upgrade1")
+focus_mode = 2
+text = "Level Completed!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Pick one"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Upgrade1" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = SubResource("GradientTexture2D_aitt3")
+
+[node name="Upgrade2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = SubResource("GradientTexture2D_13802")
+
+[node name="Upgrade3" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = SubResource("GradientTexture2D_1aosu")
+
+[node name="NextLevelButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "-Next Level-"
+
+[connection signal="focus_entered" from="VBoxContainer/Tooltip" to="." method="_on_tooltip_focus_entered"]
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Upgrade1" to="." method="_on_upgrade_1_focus_entered"]
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Upgrade2" to="." method="_on_upgrade_2_focus_entered"]
+[connection signal="focus_entered" from="VBoxContainer/HBoxContainer/Upgrade3" to="." method="_on_upgrade_3_focus_entered"]
+[connection signal="button_down" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_button_down"]
+[connection signal="button_up" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_button_up"]
+[connection signal="focus_entered" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

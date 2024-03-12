@@ -23,11 +23,10 @@ func _physics_process(_delta: float) -> void:
 	if collider.has_method('get_hit'):
 		collider.get_hit()
 	if collider.name == 'BottomWall':
-		EventBus.update_score.emit(-200)
-		die()
+		Globals.score -= 200
+		Globals.balls_in_play -= 1
+		queue_free()
 
-func die():
-	queue_free()
 
 
 func _on_paddle_detector_body_entered(body: Node2D) -> void:
