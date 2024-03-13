@@ -33,7 +33,7 @@ layout_mode = 2
 
 [node name="Relic" type="Label" parent="MarginContainer/HSplitContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
-text = "------------"
+text = "--------------"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer/VBoxContainer"]
 layout_mode = 2

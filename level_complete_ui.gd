@@ -12,10 +12,6 @@ func _ready() -> void:
 
 func _on_next_level_button_pressed() -> void:
 	next_level_pressed.emit()
-	visible = false
-	get_tree().paused = false
-	get_tree().change_scene_to_file(Globals.levels['level1'])
-
 
 # TODO these 3 need to be condensed to one func that uses resourses or idk
 # I think the script that calls an instance of this to display should generate the random rewards and insert them

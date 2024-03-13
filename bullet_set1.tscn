@@ -6,7 +6,4 @@
 script = ExtResource("1_t86so")
 
 [node name="NWSpawn" type="Marker2D" parent="."]
-position = Vector2(24, 19)
-
-[node name="NESpawn" type="Marker2D" parent="."]
-position = Vector2(144, 0)
+position = Vector2(72, 0)

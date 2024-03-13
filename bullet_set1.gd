@@ -8,7 +8,6 @@ signal bullet_set_finished
 const bullet_scene = preload('res://bullet.tscn')
 var spawn_points: Array[Marker2D]
 var tick_counter := -1
-var left := true
 
 func _ready() -> void:
 	for child in get_children():
@@ -18,12 +17,9 @@ func _process(_delta: float) -> void:
 	tick_counter += 1
 	if tick_counter == 600:
 		bullet_set_finished.emit()
-	if tick_counter % 20 == 0:
-		left = not left
-		if left:
-			spawn_bullet(nw_spawn.position, Vector2(1, 2))
-		else:
-			spawn_bullet(ne_spawn.position, Vector2(-1, 2))
+		return
+	if tick_counter % 60 == 0:
+		spawn_bullet(nw_spawn.position, Vector2(0, 1))
 
 func spawn_bullet(pos, dir) -> void:
 	var new_bullet = bullet_scene.instantiate()

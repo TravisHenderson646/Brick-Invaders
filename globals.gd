@@ -10,6 +10,7 @@ var levels := {
 var bullet_sets := {
 	# dont forget that the keys are strings not vars
 	enemy_spawner = 'res://enemy_spawner.tscn',
+	bullet_sprinkler = 'res://bullet_sprinkler.tscn',
 	bullet_set1 = 'res://bullet_set1.tscn'
 }
 
