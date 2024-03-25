@@ -11,7 +11,7 @@ var hp = 2
 func _ready() -> void:
 	modulate = Color(modulate.r + randf() - 0.5, modulate.g + randf() - 0.5, modulate.b + randf() - 0.5)
 
-func get_hit():
+func _get_hit():
 	hp -= 1
 	polygon_2d.visible = false
 	polygon_2d_2.visible = true

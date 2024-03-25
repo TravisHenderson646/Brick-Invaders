@@ -8,6 +8,18 @@ extends CharacterBody2D
 @onready var ball_on_deck: Polygon2D = $BallOnDeck
 
 
+func _ready() -> void:
+	create_ball_spawn_timer()
+
+func create_ball_spawn_timer() -> void:
+	var ball_spawn_timer = Timer.new()
+	ball_spawn_timer.process_callback = Timer.TIMER_PROCESS_PHYSICS
+	ball_spawn_timer.wait_time = Globals.new_ball_delay
+	ball_spawn_timer.timeout.connect(_add_ready_ball)
+	add_child(ball_spawn_timer)
+	ball_spawn_timer.start()
+
+
 func _physics_process(_delta: float) -> void:
 	var direction := 0
 	if Input.is_action_pressed('right'):
@@ -20,7 +32,6 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, ACCELERATION)
 
 	handle_collision()
-
 
 func handle_collision() -> void:
 	var collision_info = move_and_collide(velocity)
@@ -37,13 +48,17 @@ func get_hit() -> void:
 	if Globals.health <= 0:
 		die()
 
+
 func die() -> void:
 	get_tree().paused = true
 
 
+func _add_ready_ball() -> void:
+	if Globals.balls_ready < Globals.max_balls:
+		Globals.balls_ready += 1
+
 func _on_heart_area_entered(area: Area2D) -> void:
-	if area is Bullet:
+	if area is Bullet or area is GravityBullet:
 		get_hit()
 		if Globals.health > 0:
 			area.queue_free()
-

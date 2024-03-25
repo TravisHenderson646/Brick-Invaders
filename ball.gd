@@ -20,8 +20,8 @@ func _physics_process(_delta: float) -> void:
 		return
 	var collider = collision_info.get_collider()
 	direction = direction.bounce(collision_info.get_normal())
-	if collider.has_method('get_hit'):
-		collider.get_hit()
+	if collider.has_method('_get_hit'):
+		collider._get_hit()
 	if collider.name == 'BottomWall':
 		Globals.score -= 200
 		Globals.balls_in_play -= 1

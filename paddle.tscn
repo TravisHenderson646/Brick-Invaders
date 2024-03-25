@@ -8,38 +8,31 @@ size = Vector2(32, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hci5e"]
 size = Vector2(2, 2)
 
-[node name="Paddle" type="CharacterBody2D"]
+[node name="Paddle" type="CharacterBody2D" groups=["paddle"]]
 collision_layer = 2
 script = ExtResource("1_ccdc2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16, 4)
 shape = SubResource("RectangleShape2D_r46w1")
-metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D"]
 color = Color(0, 0.721569, 0.721569, 1)
 polygon = PackedVector2Array(-16, -4, -16, 4, 16, 4, 16, -4)
-metadata/_edit_lock_ = true
 
 [node name="Heart" type="Area2D" parent="."]
-position = Vector2(16, 4)
 collision_layer = 0
 collision_mask = 16
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart"]
 shape = SubResource("RectangleShape2D_hci5e")
-metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Heart/CollisionShape2D"]
 color = Color(0.878431, 0.286275, 0.407843, 1)
 polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
-metadata/_edit_lock_ = true
 
 [node name="BallOnDeck" type="Polygon2D" parent="."]
 visible = false
-position = Vector2(12, 0)
+position = Vector2(-4, -4)
 color = Color(0.545098, 0.545098, 0.545098, 1)
 polygon = PackedVector2Array(0, 0, 0, -8, 8, -8, 8, 0)
 

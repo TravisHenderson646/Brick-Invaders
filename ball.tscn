@@ -10,7 +10,7 @@ size = Vector2(8, 8)
 
 [node name="Ball" type="CharacterBody2D" groups=["balls"]]
 collision_layer = 4
-collision_mask = 9
+collision_mask = 41
 script = ExtResource("1_kg4td")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

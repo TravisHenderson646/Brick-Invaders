@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnntj3qbk226f"]
-
-[ext_resource type="Script" path="res://bullet_set1.gd" id="1_t86so"]
-
-[node name="BulletSet1" type="Node2D"]
-script = ExtResource("1_t86so")
-
-[node name="NWSpawn" type="Marker2D" parent="."]
-position = Vector2(72, 0)

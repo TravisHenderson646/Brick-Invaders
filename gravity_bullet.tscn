@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhj7c7v8vuhlp"]
+[gd_scene load_steps=3 format=3 uid="uid://dbokj4ryeess6"]
 
-[ext_resource type="Script" path="res://bullet.gd" id="1_lphid"]
+[ext_resource type="Script" path="res://gravity_bullet.gd" id="1_f0sth"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qyg6"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eif6w"]
 size = Vector2(4, 4)
 
-[node name="Bullet" type="Area2D" groups=["bullets"]]
+[node name="GravityBullet" type="Area2D" groups=["bullets"]]
 collision_layer = 16
 collision_mask = 4
-script = ExtResource("1_lphid")
+script = ExtResource("1_f0sth")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_4qyg6")
+shape = SubResource("RectangleShape2D_eif6w")
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D"]
 color = Color(0.803922, 0.8, 0.411765, 1)

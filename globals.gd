@@ -1,18 +1,9 @@
 extends Node
 
-
-var levels := {
-	# dont forget that the key test_level (and all of them) are strings not vars
-	test_level = 'res://test_level.gd',
-	level1 = 'res://level1.tscn'
-}
-
-var bullet_sets := {
-	# dont forget that the keys are strings not vars
-	enemy_spawner = 'res://enemy_spawner.tscn',
-	bullet_sprinkler = 'res://bullet_sprinkler.tscn',
-	bullet_set1 = 'res://bullet_set1.tscn'
-}
+var max_balls := 3
+var current_level := 0
+var new_ball_delay := 20
+var pup_choices := 3
 
 var max_health := 8: #intentionally 1 larger than hp bar on hud
 	set(new_value):
@@ -39,5 +30,3 @@ var balls_ready := 0:
 		balls_ready = new_value
 		EventBus.updated_balls_ready.emit()
 
-
-var current_level := 0

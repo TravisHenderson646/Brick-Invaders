@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3ki2ndxqchnf"]
+[gd_scene load_steps=11 format=3 uid="uid://c3ki2ndxqchnf"]
 
 [ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="1_esxhb"]
 [ext_resource type="Script" path="res://test_level.gd" id="1_lta5k"]
-[ext_resource type="Script" path="res://bullet_set_handler.gd" id="3_gpvso"]
+[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="4_kxmtc"]
+[ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="5_xhine"]
+[ext_resource type="PackedScene" uid="uid://ci605i0wgsim4" path="res://level_complete_ui.tscn" id="6_0ver4"]
 [ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="6_pugm5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jsvq"]
@@ -17,7 +19,7 @@ size = Vector2(12, 256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0h35t"]
 size = Vector2(144, 12)
 
-[node name="TestLevel" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_lta5k")
 metadata/_edit_lock_ = true
 
@@ -56,11 +58,26 @@ polygon = PackedVector2Array(144, 0, 144, 256, 0, 256, 0, 0)
 metadata/_edit_lock_ = true
 
 [node name="Paddle" parent="." instance=ExtResource("1_esxhb")]
-position = Vector2(56, 177)
+position = Vector2(71, 180)
 
-[node name="BulletSetHandler" type="Node2D" parent="."]
-script = ExtResource("3_gpvso")
+[node name="LevelPrefabHolder" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("6_pugm5")]
+
+[node name="Brick" parent="." instance=ExtResource("4_kxmtc")]
+position = Vector2(43, 99)
+
+[node name="Turret" parent="." instance=ExtResource("5_xhine")]
+position = Vector2(96, 95)
+
+[node name="LevelCompleteUI" parent="." instance=ExtResource("6_0ver4")]
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 134.0
+offset_bottom = 137.0
+grow_vertical = 2

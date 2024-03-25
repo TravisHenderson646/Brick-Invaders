@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvtddxysqvqwk"]
+
+[ext_resource type="Script" path="res://more_pups_pup.gd" id="1_ag6n3"]
+
+[sub_resource type="Gradient" id="Gradient_v0olv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13802"]
+gradient = SubResource("Gradient_v0olv")
+width = 16
+height = 16
+fill_from = Vector2(1, 0.264957)
+
+[node name="MorePupsPup" type="Button"]
+icon = SubResource("GradientTexture2D_13802")
+script = ExtResource("1_ag6n3")
+custom_tooltip_text = "Flippin 4 pups 2 pick"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
