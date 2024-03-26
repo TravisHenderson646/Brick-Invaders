@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cnmh38gr6nvwf"]
+
+[ext_resource type="Script" path="res://wider_paddle_pup.gd" id="1_6b3ff"]
+
+[sub_resource type="Gradient" id="Gradient_t8o3r"]
+offsets = PackedFloat32Array(0, 0.702041, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.296801, 0.774295, 0.870452, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0a727"]
+gradient = SubResource("Gradient_t8o3r")
+width = 10
+height = 10
+
+[resource]
+script = ExtResource("1_6b3ff")
+testerer = ""
+description = ""
+icon = SubResource("GradientTexture2D_0a727")

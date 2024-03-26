@@ -5,7 +5,7 @@ extends Button
 
 func _on_pressed() -> void:
 	EventBus.pup_selected.emit()
-	Globals.pup_choices += 1
+	Globals.num_pup_choices += 1
 	#get_tree().reload_current_scene() for testing
 
 

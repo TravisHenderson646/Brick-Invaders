@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://eleyihhotkk4"]
+
+[ext_resource type="Script" path="res://test_pup.gd" id="2_a0ouk"]
+
+[sub_resource type="Gradient" id="Gradient_bf6mk"]
+offsets = PackedFloat32Array(0, 0.289796, 0.718367, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.373231, 0.283854, 0.124926, 1, 0.642446, 0.488602, 0.215036, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jvc3x"]
+gradient = SubResource("Gradient_bf6mk")
+width = 20
+height = 20
+fill_from = Vector2(0, 1)
+
+[resource]
+script = ExtResource("2_a0ouk")
+testerer = "fake lol"
+description = "A test pup"
+icon = SubResource("GradientTexture2D_jvc3x")

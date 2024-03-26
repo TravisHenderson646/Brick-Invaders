@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://se46un01f4h4"]
+
+[ext_resource type="Script" path="res://pup_button.gd" id="1_e63xk"]
+
+[sub_resource type="Gradient" id="Gradient_v0olv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1aosu"]
+gradient = SubResource("Gradient_v0olv")
+width = 16
+height = 16
+
+[node name="PupButton" type="Button"]
+custom_minimum_size = Vector2(24, 24)
+offset_right = 24.0
+offset_bottom = 24.0
+theme_override_constants/icon_max_width = 24
+icon = SubResource("GradientTexture2D_1aosu")
+script = ExtResource("1_e63xk")
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

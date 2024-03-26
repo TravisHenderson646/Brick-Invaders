@@ -13,6 +13,7 @@ var ball_respawn_rate := 1200
 var brick_check_delay := 2
 
 func _ready() -> void:
+	remove_child(level_complete_ui)
 	level_complete_ui.next_level_pressed.connect(_on_next_level_pressed)
 	Globals.balls_ready = 2
 	spawn_bricks()
@@ -66,8 +67,7 @@ func check_level_end() -> void:
 		for bullet in get_tree().get_nodes_in_group('bullets'):
 			Globals.score += 10
 		add_child(level_complete_ui)
-		level_complete_ui.tooltip.grab_focus()
-		level_complete_ui.offer_new_pups()
+		level_complete_ui.setup()
 		get_tree().paused = true
 
 

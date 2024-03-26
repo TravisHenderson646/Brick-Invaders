@@ -3,7 +3,7 @@ extends Node
 var max_balls := 3
 var current_level := 0
 var new_ball_delay := 20
-var pup_choices := 3
+var num_pup_choices := 3
 
 var max_health := 8: #intentionally 1 larger than hp bar on hud
 	set(new_value):
