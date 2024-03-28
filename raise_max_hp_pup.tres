@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dcfrorgx0lrjl"]
+
+[ext_resource type="Script" path="res://raise_max_hp_pup.gd" id="1_vfwog"]
+
+[sub_resource type="Gradient" id="Gradient_pojcj"]
+colors = PackedColorArray(0, 0, 0.992157, 1, 0.392157, 0.388235, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k60dt"]
+gradient = SubResource("Gradient_pojcj")
+width = 5
+height = 20
+fill_from = Vector2(0.735043, 0.252137)
+fill_to = Vector2(0.495726, 0.824786)
+
+[resource]
+script = ExtResource("1_vfwog")
+description = "+2 max hp"
+icon = SubResource("GradientTexture2D_k60dt")

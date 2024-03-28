@@ -10,6 +10,8 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	create_ball_spawn_timer()
+	EventBus.got_wider_paddle.connect(_on_got_wider_paddle)
+	EventBus.got_small_heart.connect(_on_got_small_heart)
 
 func create_ball_spawn_timer() -> void:
 	var ball_spawn_timer = Timer.new()
@@ -62,3 +64,11 @@ func _on_heart_area_entered(area: Area2D) -> void:
 		get_hit()
 		if Globals.health > 0:
 			area.queue_free()
+
+
+func _on_got_small_heart() -> void:
+	get_node('Heart/CollisionShape2D').scale = Vector2(0.5, 0.5)
+
+func _on_got_wider_paddle() -> void:
+	get_node('CollisionShape2D').scale.x = 1.25
+	position.x = ProjectSettings.get_setting('display/window/size/viewport_width') / 2

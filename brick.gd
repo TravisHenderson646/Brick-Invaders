@@ -20,6 +20,6 @@ func _get_hit():
 
 
 func die():
-	Globals.score += 100
+	Globals.score += 5
 	queue_free()
 	brick_died.emit()

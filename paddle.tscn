@@ -27,6 +27,8 @@ collision_mask = 16
 shape = SubResource("RectangleShape2D_hci5e")
 
 [node name="Polygon2D" type="Polygon2D" parent="Heart/CollisionShape2D"]
+position = Vector2(5.96046e-08, 5.96046e-08)
+scale = Vector2(2, 2)
 color = Color(0.878431, 0.286275, 0.407843, 1)
 polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
 

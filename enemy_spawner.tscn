@@ -1,9 +1,44 @@
-[gd_scene load_steps=2 format=3 uid="uid://g11x6civ14yy"]
+[gd_scene load_steps=2 format=3 uid="uid://c4s7n4nggnxas"]
 
-[ext_resource type="Script" path="res://enemy_spawner.gd" id="1_5c435"]
+[sub_resource type="GDScript" id="GDScript_odvm5"]
+script/source = "extends Node2D
+
+@onready var nw_spawn: Marker2D = $NWSpawn
+@onready var ne_spawn: Marker2D = $NESpawn
+
+signal bullet_set_finished
+
+const bullet_scene = preload('res://bullet.tscn')
+var spawn_points: Array[Marker2D]
+var tick_counter := -1
+var left := true
+
+func _ready() -> void:
+	for child in get_children():
+		spawn_points.append(child)
+
+func _process(_delta: float) -> void:
+	tick_counter += 1
+	if tick_counter == 600:
+		bullet_set_finished.emit()
+	if tick_counter % 60 == 0:
+		left = not left
+		if left:
+			spawn_bullet(nw_spawn.position, Vector2(1, 2))
+		else:
+			spawn_bullet(ne_spawn.position, Vector2(-1, 2))
+
+func spawn_bullet(pos, dir) -> void:
+	var new_bullet = bullet_scene.instantiate()
+	new_bullet.position = pos
+	new_bullet.direction = dir
+	get_tree().current_scene.add_child(new_bullet)
+
+
+"
 
 [node name="EnemySpawner" type="Node2D"]
-script = ExtResource("1_5c435")
+script = SubResource("GDScript_odvm5")
 
 [node name="NWSpawn" type="Marker2D" parent="."]
 

@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3ki2ndxqchnf"]
+[gd_scene load_steps=9 format=3 uid="uid://c3ki2ndxqchnf"]
 
-[ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="1_esxhb"]
-[ext_resource type="Script" path="res://test_level.gd" id="1_lta5k"]
-[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="4_kxmtc"]
-[ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="5_xhine"]
-[ext_resource type="PackedScene" uid="uid://ci605i0wgsim4" path="res://level_complete_ui.tscn" id="6_0ver4"]
-[ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="6_pugm5"]
+[ext_resource type="Script" path="res://main.gd" id="1_y3lyj"]
+[ext_resource type="PackedScene" uid="uid://e01mbr62du3w" path="res://paddle.tscn" id="2_tst6f"]
+[ext_resource type="PackedScene" uid="uid://dkangnorh7akj" path="res://hud.tscn" id="3_5rxnp"]
+[ext_resource type="PackedScene" uid="uid://ci605i0wgsim4" path="res://level_complete_ui.tscn" id="4_1y8xw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jsvq"]
 size = Vector2(144, 12)
@@ -19,8 +17,8 @@ size = Vector2(12, 256)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0h35t"]
 size = Vector2(144, 12)
 
-[node name="Level" type="Node2D"]
-script = ExtResource("1_lta5k")
+[node name="Main" type="Node2D"]
+script = ExtResource("1_y3lyj")
 metadata/_edit_lock_ = true
 
 [node name="Walls" type="Node2D" parent="."]
@@ -57,22 +55,16 @@ color = Color(0.0980392, 0.0980392, 0.0980392, 1)
 polygon = PackedVector2Array(144, 0, 144, 256, 0, 256, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="Paddle" parent="." instance=ExtResource("1_esxhb")]
+[node name="Paddle" parent="." instance=ExtResource("2_tst6f")]
 position = Vector2(71, 180)
 
 [node name="LevelPrefabHolder" type="Node2D" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("6_pugm5")]
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_5rxnp")]
 
-[node name="Brick" parent="." instance=ExtResource("4_kxmtc")]
-position = Vector2(43, 99)
-
-[node name="Turret" parent="." instance=ExtResource("5_xhine")]
-position = Vector2(96, 95)
-
-[node name="LevelCompleteUI" parent="." instance=ExtResource("6_0ver4")]
+[node name="LevelCompleteUI" parent="." instance=ExtResource("4_1y8xw")]
 anchors_preset = 8
 anchor_top = 0.5
 anchor_bottom = 0.5

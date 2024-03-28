@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvfwqgbkp1uq3"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_pwhxg"]
+[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="2_nspac"]
+[ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="3_6bv1i"]
+[ext_resource type="Script" path="res://simple_pattern.gd" id="4_n8k0b"]
+
+[node name="StandardLevel" type="Node2D"]
+script = ExtResource("1_pwhxg")
+metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [176.0]
+
+[node name="Brick355" parent="." instance=ExtResource("2_nspac")]
+position = Vector2(64, 124)
+
+[node name="Turret" parent="." instance=ExtResource("3_6bv1i")]
+position = Vector2(42, 125)
+pattern = ExtResource("4_n8k0b")

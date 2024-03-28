@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwaq1veoeyxi5"]
+[gd_scene load_steps=4 format=3 uid="uid://cwaq1veoeyxi5"]
 
 [ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="1_xoqwk"]
 [ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="2_5xich"]
+[ext_resource type="Script" path="res://sparks_pattern.gd" id="3_cbcdg"]
 
 [node name="LevelPrefab1" type="Node2D"]
 
@@ -10,3 +11,4 @@ position = Vector2(96, 113)
 
 [node name="Turret3" parent="." instance=ExtResource("2_5xich")]
 position = Vector2(37, 111)
+pattern = ExtResource("3_cbcdg")

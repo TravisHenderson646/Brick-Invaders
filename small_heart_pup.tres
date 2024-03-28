@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c6jar6a5jg6fq"]
+
+[ext_resource type="Script" path="res://small_heart_pup.gd" id="1_j0huh"]
+
+[sub_resource type="Gradient" id="Gradient_dnye3"]
+colors = PackedColorArray(0.568627, 0.0509804, 0.243137, 1, 0.878431, 0.286275, 0.407843, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v4cm4"]
+gradient = SubResource("Gradient_dnye3")
+width = 15
+height = 15
+
+[resource]
+script = ExtResource("1_j0huh")
+description = "Small Heart"
+icon = SubResource("GradientTexture2D_v4cm4")

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qyg6"]
 size = Vector2(4, 4)
 
-[node name="Bullet" type="Area2D" groups=["bullets"]]
+[node name="Bullet" type="Area2D" groups=["bullets", "delete"]]
 collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_lphid")

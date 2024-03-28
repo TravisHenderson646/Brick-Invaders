@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6qfxr0m6kgyu"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_bsywo"]
+[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="2_hmvnn"]
+[ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="3_pqv4h"]
+[ext_resource type="Script" path="res://simple_pattern.gd" id="4_2s24q"]
+
+[node name="StandardLevel" type="Node2D"]
+script = ExtResource("1_bsywo")
+metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [176.0]
+
+[node name="Brick173" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 35)
+
+[node name="Brick175" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 35)
+
+[node name="Brick176" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 35)
+
+[node name="Brick177" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 35)
+
+[node name="Brick178" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 35)
+
+[node name="Brick182" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 39)
+
+[node name="Brick184" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 39)
+
+[node name="Brick185" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 39)
+
+[node name="Brick186" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 39)
+
+[node name="Brick187" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 39)
+
+[node name="Brick191" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 43)
+
+[node name="Brick193" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 43)
+
+[node name="Brick194" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 43)
+
+[node name="Brick195" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 43)
+
+[node name="Brick196" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 43)
+
+[node name="Brick200" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 47)
+
+[node name="Brick202" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 47)
+
+[node name="Brick203" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 47)
+
+[node name="Brick204" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 47)
+
+[node name="Brick205" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 47)
+
+[node name="Brick209" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 51)
+
+[node name="Brick211" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 51)
+
+[node name="Brick212" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 51)
+
+[node name="Brick213" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 51)
+
+[node name="Brick214" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 51)
+
+[node name="Brick218" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 55)
+
+[node name="Brick220" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 55)
+
+[node name="Brick221" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 55)
+
+[node name="Brick222" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 55)
+
+[node name="Brick223" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 55)
+
+[node name="Brick227" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(96, 59)
+
+[node name="Brick229" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(64, 59)
+
+[node name="Brick230" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(80, 59)
+
+[node name="Brick231" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(32, 59)
+
+[node name="Brick232" parent="." instance=ExtResource("2_hmvnn")]
+position = Vector2(48, 59)
+
+[node name="Turret" parent="." instance=ExtResource("3_pqv4h")]
+position = Vector2(108, 31)
+pattern = ExtResource("4_2s24q")
+
+[node name="Turret2" parent="." instance=ExtResource("3_pqv4h")]
+position = Vector2(36, 31)
+pattern = ExtResource("4_2s24q")
+
+[node name="Turret3" parent="." instance=ExtResource("3_pqv4h")]
+position = Vector2(72, 67)
+pattern = ExtResource("4_2s24q")

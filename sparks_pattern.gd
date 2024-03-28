@@ -8,10 +8,10 @@ var spawn_rate = randi() % 2 + 3
 var spread = 0.5
 
 func _init() -> void:
-	print('simple pattern init')
+	pass
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	tick_counter += 1
 	stun_timer += 1
 	if stun_timer > stun_length:

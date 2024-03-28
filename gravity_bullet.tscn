@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eif6w"]
 size = Vector2(4, 4)
 
-[node name="GravityBullet" type="Area2D" groups=["bullets"]]
+[node name="GravityBullet" type="Area2D" groups=["bullets", "delete"]]
 collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_f0sth")

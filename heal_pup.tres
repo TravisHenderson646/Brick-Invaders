@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cpcx03mc03c0e"]
+
+[ext_resource type="Script" path="res://heal_pup.gd" id="1_hx3v6"]
+
+[sub_resource type="Gradient" id="Gradient_ph7fq"]
+colors = PackedColorArray(0.831373, 0.231373, 0.27451, 1, 0.929412, 0.203922, 0.615686, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4xfls"]
+gradient = SubResource("Gradient_ph7fq")
+width = 10
+height = 5
+
+[resource]
+script = ExtResource("1_hx3v6")
+description = "Full heal"
+icon = SubResource("GradientTexture2D_4xfls")

@@ -9,10 +9,10 @@ var stun_timer := stun_length
 #var bullet_patterns = bullet_pattern.new()
 
 func _init() -> void:
-	print('simple pattern init')
+	pass
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	tick_counter += 1
 	stun_timer += 1
 	if stun_timer > stun_length:

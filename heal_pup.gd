@@ -1,4 +1,5 @@
 extends Pup
 
+
 func activate() -> void:
-	EventBus.got_wider_paddle.emit()
+	Globals.health = Globals.max_health

@@ -8,7 +8,6 @@ var spawn_rate = 0
 #var bullet_patterns = bullet_pattern.new()
 
 func _init() -> void:
-	print('simple pattern init')
 	spawn_rate = randi() % 200 + 300
 
 func _physics_process(_delta: float) -> void:

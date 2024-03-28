@@ -23,7 +23,7 @@ func _physics_process(_delta: float) -> void:
 	if collider.has_method('_get_hit'):
 		collider._get_hit()
 	if collider.name == 'BottomWall':
-		Globals.score -= 200
+		Globals.score -= 30
 		Globals.balls_in_play -= 1
 		queue_free()
 

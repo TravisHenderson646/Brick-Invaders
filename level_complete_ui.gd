@@ -13,11 +13,12 @@ const TEST_PUP = preload('res://test_pup.tres')
 signal next_level_pressed
 
 func _ready() -> void:
+	pups_list.shuffle() #uncomment
 	pass
 
 func setup() -> void:
-	await get_tree().create_timer(1).timeout
-	get_tree().paused = true # REMOVE THIS AFTER TESTING
+	#await get_tree().create_timer(1).timeout
+	#get_tree().paused = true # REMOVE THIS AFTER TESTING
 	tooltip.grab_focus()
 	for child in upgrades.get_children():
 		child.queue_free()

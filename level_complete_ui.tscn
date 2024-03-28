@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://ci605i0wgsim4"]
+[gd_scene load_steps=10 format=3 uid="uid://ci605i0wgsim4"]
 
 [ext_resource type="Script" path="res://level_complete_ui.gd" id="1_fnf0x"]
 [ext_resource type="PackedScene" uid="uid://26o21l1c6e6q" path="res://faster_balls_pup.tscn" id="2_1k65t"]
-[ext_resource type="Resource" uid="uid://eleyihhotkk4" path="res://test_pup.tres" id="2_vpqqo"]
-[ext_resource type="Resource" uid="uid://dshuf4nx0a1da" path="res://test_pup2.tres" id="3_sseuj"]
+[ext_resource type="Resource" uid="uid://ughf1s65rlo3" path="res://extra_ball_pup.tres" id="2_06ow0"]
+[ext_resource type="Resource" uid="uid://dcfrorgx0lrjl" path="res://raise_max_hp_pup.tres" id="2_imua8"]
+[ext_resource type="Resource" uid="uid://c6jar6a5jg6fq" path="res://small_heart_pup.tres" id="3_v5h0s"]
 [ext_resource type="PackedScene" uid="uid://7rnxvxsnsmxj" path="res://more_pups_pup.tscn" id="3_vuv1t"]
 [ext_resource type="Resource" uid="uid://cnmh38gr6nvwf" path="res://wider_paddle_pup.tres" id="4_g75ub"]
 [ext_resource type="PackedScene" uid="uid://se46un01f4h4" path="res://pup_button.tscn" id="4_gc5va"]
+[ext_resource type="Resource" uid="uid://cpcx03mc03c0e" path="res://heal_pup.tres" id="5_lnpcc"]
 
 [node name="LevelCompleteUI" type="PanelContainer"]
 process_mode = 3
@@ -19,7 +21,7 @@ offset_right = 59.0
 offset_bottom = 165.0
 grow_horizontal = 2
 script = ExtResource("1_fnf0x")
-pups_list = Array[Resource("res://pup.gd")]([ExtResource("2_vpqqo"), ExtResource("3_sseuj"), ExtResource("4_g75ub")])
+pups_list = Array[Resource("res://pup.gd")]([ExtResource("2_imua8"), ExtResource("5_lnpcc"), ExtResource("2_06ow0"), ExtResource("3_v5h0s"), ExtResource("4_g75ub")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

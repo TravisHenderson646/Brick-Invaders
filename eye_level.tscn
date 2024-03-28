@@ -1,0 +1,145 @@
+[gd_scene load_steps=5 format=3 uid="uid://blrjcc7ip4t18"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_26023"]
+[ext_resource type="PackedScene" uid="uid://ccxe0xlrxphyu" path="res://brick.tscn" id="2_cmd6v"]
+[ext_resource type="PackedScene" uid="uid://dstoyv4pxw11h" path="res://turret.tscn" id="3_68v82"]
+[ext_resource type="Script" path="res://aiming_pattern.gd" id="4_vdjl8"]
+
+[node name="StandardLevel" type="Node2D"]
+script = ExtResource("1_26023")
+
+[node name="Brick" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 22)
+
+[node name="Brick2" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 34)
+
+[node name="Brick3" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 30)
+
+[node name="Brick4" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 26)
+
+[node name="Brick18" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 34)
+
+[node name="Brick19" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 30)
+
+[node name="Brick5" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 22)
+
+[node name="Brick6" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 34)
+
+[node name="Brick7" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 30)
+
+[node name="Brick8" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 26)
+
+[node name="Brick10" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 34)
+
+[node name="Brick11" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 30)
+
+[node name="Brick29" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 38)
+
+[node name="Brick33" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 38)
+
+[node name="Brick34" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 50)
+
+[node name="Brick35" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 46)
+
+[node name="Brick36" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 42)
+
+[node name="Brick41" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 38)
+
+[node name="Brick45" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 38)
+
+[node name="Brick46" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 50)
+
+[node name="Brick47" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 46)
+
+[node name="Brick48" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 42)
+
+[node name="Brick54" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 66)
+
+[node name="Brick57" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 54)
+
+[node name="Brick58" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 66)
+
+[node name="Brick59" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 62)
+
+[node name="Brick60" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(104, 58)
+
+[node name="Brick66" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 66)
+
+[node name="Brick69" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 54)
+
+[node name="Brick70" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 66)
+
+[node name="Brick71" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 62)
+
+[node name="Brick72" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(24, 58)
+
+[node name="Brick73" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 70)
+
+[node name="Brick74" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 82)
+
+[node name="Brick75" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 78)
+
+[node name="Brick76" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(72, 74)
+
+[node name="Brick77" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 70)
+
+[node name="Brick80" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(88, 74)
+
+[node name="Brick85" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 70)
+
+[node name="Brick86" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 82)
+
+[node name="Brick87" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 78)
+
+[node name="Brick88" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(56, 74)
+
+[node name="Brick89" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 70)
+
+[node name="Brick92" parent="." instance=ExtResource("2_cmd6v")]
+position = Vector2(40, 74)
+
+[node name="Turret" parent="." instance=ExtResource("3_68v82")]
+position = Vector2(72, 53)
+pattern = ExtResource("4_vdjl8")
