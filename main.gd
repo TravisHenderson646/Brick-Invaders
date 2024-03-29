@@ -9,11 +9,11 @@ const brick_scene = preload('res://brick.tscn')
 const level_prefab1 = preload('res://level_prefab1.tscn')
 
 const levels = [
-	preload('res://one_brick_level.tscn'),
+	#preload('res://one_brick_level.tscn'),
 	preload('res://easy_level.tscn'),
-	preload('res://fun_level.tscn'),
-	preload('res://eye_level.tscn'),
 	preload('res://cavern_level.tscn'),
+	preload('res://eye_level.tscn'),
+	preload('res://fun_level.tscn'),
 ]
 
 var tick_counter := -1
@@ -25,7 +25,7 @@ var current_lvl := 0
 func _ready() -> void:
 	remove_child(level_complete_ui)
 	level_complete_ui.next_level_pressed.connect(_on_next_level_pressed)
-	Globals.balls_ready = 2
+	Globals.balls_ready = Globals.num_start_balls
 	spawn_level()
 
 
@@ -63,7 +63,7 @@ func spawn_level() -> void:
 	for brick in get_tree().get_nodes_in_group('bricks'):
 		brick.brick_died.connect(on_brick_died)
 	get_tree().paused = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	get_tree().paused = false
 
 func on_brick_died() -> void:
